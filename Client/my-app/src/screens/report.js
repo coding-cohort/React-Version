@@ -41,6 +41,7 @@ function Report() {
         />
         <h1 id="heading">Debbie</h1>
         <button
+          class="signout-button"
           onClick={() => {
             signout(() => {
               history.navigate("/");

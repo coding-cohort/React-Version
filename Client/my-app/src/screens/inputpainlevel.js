@@ -54,7 +54,7 @@ class Input extends Component {
           />
           <h1 id="main-heading">Debbie</h1>
           <Link to="/report" className="input-button">
-            <span className="ml-3">X</span>
+            <span>X</span>
           </Link>
         </nav>
         <div class="img-container">

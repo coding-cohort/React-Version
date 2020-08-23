@@ -133,10 +133,11 @@ const Register = () => {
               onChange={handleChange("password2")}
               value={password2}
             />
-            <button type="submit" className="button">
-              <i className="fas fa-user-plus fa 1x w-6  -ml-2" />
-              <span className="ml-3">{textChange}</span>
-            </button>
+            <div class="btn">
+              <button type="submit" className="button">
+                <span className="ml-3">{textChange}</span>
+              </button>
+            </div>
           </div>
         </form>
       </div>
