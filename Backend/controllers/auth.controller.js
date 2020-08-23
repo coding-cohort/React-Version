@@ -9,10 +9,13 @@ const jwt = require("jsonwebtoken");
 
 const { errorHandler } = require("../helpers/dbErrorHandling");
 const sgEmail = require("@sendgrid/mail");
-sgEmail.setApiKey("YOUR_SENDGRID_KEY");
+sgEmail.setApiKey(
+  "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"
+);
 
 exports.painController = (req, res) => {
   const pain = new Pain({
+    user_data: req.user_data.id,
     pain: req.body.pain,
   });
   pain.save((err) => {

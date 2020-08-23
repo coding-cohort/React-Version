@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Logo from "../assets/logo.png";
 import Woman from "../assets/super_woman copy.svg";
+import Like from "../assets/like.svg";
 import {
   NotificationContainer,
   NotificationManager,
@@ -122,7 +123,7 @@ const Login = ({ history }) => {
         </div>
 
         <GoogleLogin
-          clientId="YOUR_GOOGLE_ID"
+          clientId="771050291753-sic3fmdfr5i7trak2ds02mmjqv77vo10.apps.googleusercontent.com"
           onSuccess={responseGoogle}
           onFailure={responseGoogle}
           cookiePolicy={"single_host_origin"}
@@ -134,7 +135,7 @@ const Login = ({ history }) => {
         ></GoogleLogin>
 
         <FacebookLogin
-          appId="YOUR_FACEBOOK_ID"
+          appId="709826499794455"
           autoLoad={false}
           callback={responseFacebook}
           render={(renderProps) => (
@@ -170,18 +171,19 @@ const Login = ({ history }) => {
             />
 
             <button type="submit" class="button">
-              <i className="fas fa-sign-in-alt  w-6  -ml-2" />
               <span className="ml-3">Sign In</span>
             </button>
           </div>
 
           <div class="forgot-password-link">
             <h1 class="text-or">OR</h1>
-            <Link to="/users/password/forget" className="">
-              Forget password?
-            </Link>
+            <Link to="/users/password/forget">Forget password?</Link>
           </div>
         </form>
+        <footer id="footer">
+          Built with <img src={Like} alt="heart icon" class="hearticonfooter" />
+          by the coding cohort
+        </footer>
       </div>
     </React.Fragment>
   );
